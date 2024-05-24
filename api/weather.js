@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const apiKey = '72f818e70afa4d529d182029242405';
 const apiURL = params => `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${params.country}&days=${params.days}&aqi=no&alerts=no`;
 
