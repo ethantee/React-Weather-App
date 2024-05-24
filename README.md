@@ -12,29 +12,117 @@ This is a simple weather application built with React Native and Expo. It fetche
 
 To run this project locally, follow these steps:
 
-1. Clone the repository:
+### Step 1: Install Node.js and npm
 
-    ```sh
-    git clone https://github.com/ethantee/react-weather-app.git
-    ```
+First, you need to install Node.js and npm. Download the prebuilt installer from the [Node.js website](https://nodejs.org/en/download/prebuilt-installer) and follow the installation instructions.
 
-2. Navigate to the project directory:
+### Step 2: Create a New Expo App
 
-    ```sh
-    cd react-weather-app
-    ```
+Open your terminal and run the following command to create a new Expo app using the template:
 
-3. Install the dependencies:
+```shell
+npx create-expo-app --template
+```
 
-    ```sh
-    npm install
-    ```
+### Step 3: Navigate to Your App Directory
 
-4. Start the Expo development server:
+Change to your app directory with the following command:
 
-    ```sh
-    npx expo start
-    ```
+```shell
+cd yourAppName
+```
+
+### Step 4: Install React Native Heroicons and React Native SVG
+
+To use Heroicons in your app, install `react-native-heroicons` and `react-native-svg`:
+
+```shell
+npm install react-native-heroicons react-native-svg
+```
+
+### Step 5: Install React Native Progress
+
+Next, install `react-native-progress` to display progress indicators in your app:
+
+```shell
+npm install react-native-progress
+```
+
+### Step 6: Install Axios
+
+Install `axios` to make HTTP requests to fetch weather data:
+
+```shell
+npm install axios
+```
+
+### Step 7: Set Up TailwindCSS with NativeWind
+
+a. Install NativeWind
+
+```shell
+npm install nativewind
+```
+
+b. Install TailwindCSS
+
+Install TailwindCSS as a development dependency:
+
+```shell
+npm install --save-dev tailwindcss@3.3.2
+```
+
+c. Initialize TailwindCSS
+
+Run the following command to create a TailwindCSS configuration file:
+
+```shell
+npx tailwindcss init
+```
+
+d. Configure TailwindCSS
+
+Replace the contents of `tailwind.config.js` with the following configuration:
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+e. Configure Babel
+
+Replace the contents of `babel.config.js` with the following configuration:
+
+```javascript
+// babel.config.js
+module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ["babel-preset-expo"],
+    plugins: ["nativewind/babel"],
+  };
+};
+```
+
+### Step 8: Start the Expo Development Server
+
+Finally, start the Expo development server with the following command:
+
+```shell
+npx expo start
+```
+
+If you need to use the tunnel option, use:
+
+```shell
+npx expo start --tunnel
+```
 
 ## Usage
 
