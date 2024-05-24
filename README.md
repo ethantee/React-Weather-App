@@ -15,7 +15,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/react-weather-app.git
+    git clone https://github.com/ethantee/react-weather-app.git
     ```
 
 2. Navigate to the project directory:
